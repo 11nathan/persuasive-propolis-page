@@ -1,10 +1,10 @@
 
 import React from "react";
-import HeroSection from "@/components/HeroSection";
-import ProductCard from "@/components/ProductCard";
-import TestimonialCard from "@/components/TestimonialCard";
-import CountdownTimer from "@/components/CountdownTimer";
-import BenefitsSection from "@/components/BenefitsSection";
+import HeroSection from "../components/HeroSection";
+import ProductCard from "../components/ProductCard";
+import TestimonialCard from "../components/TestimonialCard";
+import CountdownTimer from "../components/CountdownTimer";
+import BenefitsSection from "../components/BenefitsSection";
 
 const Index = () => {
   return (
