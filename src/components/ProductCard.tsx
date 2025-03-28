@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Check } from 'lucide-react';
+import { Check, ShoppingCart, Star } from 'lucide-react';
 
 interface ProductCardProps {
   title: string;
@@ -33,7 +33,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   const buttonBg = productType === 'kids' ? 'bg-purple-600 hover:bg-purple-700' : 'bg-propolis-green hover:bg-propolis-green/90';
 
   return (
-    <div className={`rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${cardGradient}`}>
+    <div className={`rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ${cardGradient}`}>
       <div className="relative">
         <img 
           src={imageSrc} 
@@ -41,8 +41,8 @@ const ProductCard: React.FC<ProductCardProps> = ({
           className="w-full h-64 object-contain p-4"
         />
         {originalPrice && (
-          <Badge className="absolute top-4 right-4 bg-red-500 text-white">
-            OFERTA
+          <Badge className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 text-sm font-bold">
+            OFERTA ESPECIAL
           </Badge>
         )}
       </div>
@@ -52,23 +52,26 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <p className="text-gray-600 mb-4">{description}</p>
         
         <div className="mb-6">
-          <h4 className="font-bold mb-2">Beneficios:</h4>
-          <ul className="space-y-1">
+          <h4 className="font-bold mb-2 flex items-center gap-2">
+            <Star className="w-5 h-5 text-propolis-gold" fill="currentColor" />
+            Beneficios:
+          </h4>
+          <ul className="space-y-2">
             {benefits.map((benefit, index) => (
-              <li key={index} className="flex items-start">
+              <li key={index} className="flex items-start bg-white/50 p-2 rounded-lg">
                 <span className={`mr-2 ${accentColor} flex-shrink-0 mt-1`}>
-                  <Check className="h-4 w-4" />
+                  <Check className="h-5 w-5" />
                 </span>
-                <span className="text-gray-700">{benefit}</span>
+                <span className="text-gray-700 font-medium">{benefit}</span>
               </li>
             ))}
           </ul>
         </div>
         
         {boxImageSrc && (
-          <div className="mb-4">
+          <div className="mb-6">
             <h4 className="font-bold mb-2">También disponible en caja:</h4>
-            <div className="bg-white p-2 rounded-lg">
+            <div className="bg-white p-3 rounded-lg shadow-sm">
               <img 
                 src={boxImageSrc} 
                 alt={`${title} en caja`} 
@@ -78,15 +81,28 @@ const ProductCard: React.FC<ProductCardProps> = ({
           </div>
         )}
         
-        <div className="flex items-center justify-between mb-4">
-          <div>
-            <span className="text-2xl font-bold">{price}</span>
+        <div className="flex flex-col gap-4 mb-2">
+          <div className="flex items-center justify-between">
+            <div>
+              <span className="text-3xl font-bold">{price}</span>
+              {originalPrice && (
+                <span className="text-gray-500 line-through ml-2">{originalPrice}</span>
+              )}
+            </div>
             {originalPrice && (
-              <span className="text-gray-500 line-through ml-2">{originalPrice}</span>
+              <Badge className="bg-green-500 text-white">
+                Ahorra {(() => {
+                  const priceNum = parseFloat(price.replace('$', ''));
+                  const originalPriceNum = parseFloat(originalPrice.replace('$', ''));
+                  const discount = Math.round(((originalPriceNum - priceNum) / originalPriceNum) * 100);
+                  return `${discount}%`;
+                })()}
+              </Badge>
             )}
           </div>
-          <Button className={`${buttonBg} text-white px-6 rounded-full`}>
-            Comprar
+          <Button className={`${buttonBg} text-white px-6 py-7 rounded-full text-lg font-bold w-full animate-shake-hover flex gap-2 justify-center`}>
+            <ShoppingCart className="w-5 h-5" />
+            Comprar Ahora
           </Button>
         </div>
       </div>

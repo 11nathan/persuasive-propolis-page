@@ -37,10 +37,13 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50" id="beneficios">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">¿Por Qué Elegir Propolis Biovital?</h2>
+          <span className="bg-green-50 text-propolis-green px-4 py-1 rounded-full text-sm font-semibold uppercase tracking-wider">
+            Por qué elegirnos
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-4">Los Beneficios del Propóleo de Biovital</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Nuestros productos combinan lo mejor de la naturaleza con la ciencia moderna para ofrecerte soluciones efectivas.
           </p>
@@ -48,7 +51,7 @@ const BenefitsSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
-            <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center">
+            <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center text-center h-full">
               <div className="mb-4 p-3 rounded-full bg-gray-100">
                 {benefit.icon}
               </div>
