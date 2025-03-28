@@ -30,7 +30,8 @@ const Index = () => {
               <ProductCard 
                 title="Propolis Biovital Herbal"
                 description="Fórmula potente para adultos con propóleo puro, jengibre, aloe vera y eucalipto."
-                imageSrc="/lovable-uploads/405c3428-db81-4adf-b1d9-41d9c69ed616.png"
+                imageSrc="/lovable-uploads/b1d6f914-56bb-4b59-8da7-0167d8c9c357.png"
+                boxImageSrc="/lovable-uploads/2196cd37-5ece-4380-8db8-8bf875d3346c.png"
                 productType="herbal"
                 benefits={[
                   "Fortalece el sistema inmunológico",
@@ -47,7 +48,8 @@ const Index = () => {
               <ProductCard 
                 title="Propolis Biovital Kids"
                 description="Especialmente formulado para niños, con propóleo, jengibre y aloe vera en una dosis adecuada."
-                imageSrc="/lovable-uploads/4deffe80-c824-4e0a-86d0-114403fba853.png"
+                imageSrc="/lovable-uploads/f621f23f-5a7e-4b43-ad96-b41a3ca58033.png"
+                boxImageSrc="/lovable-uploads/438a6cca-ff56-40aa-9357-754bba17703e.png"
                 productType="kids"
                 benefits={[
                   "Refuerza las defensas de los niños",
@@ -58,6 +60,82 @@ const Index = () => {
                 price="$22.99"
                 originalPrice="$27.99"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Product Collection Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Nuestra Colección Completa
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explora toda nuestra gama de productos de propóleo para diferentes necesidades
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <img 
+                src="/lovable-uploads/b1d6f914-56bb-4b59-8da7-0167d8c9c357.png" 
+                alt="Propolis Herbal Botella" 
+                className="h-48 object-contain mx-auto mb-4"
+              />
+              <h3 className="text-xl font-bold text-propolis-green text-center">Propolis Herbal (Botella)</h3>
+              <p className="text-center text-gray-600">Formato líquido para una absorción rápida</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <img 
+                src="/lovable-uploads/2aa9a1ab-9ea7-4fb0-a7b8-18183f38731e.png" 
+                alt="Propolis Herbal Botellas" 
+                className="h-48 object-contain mx-auto mb-4"
+              />
+              <h3 className="text-xl font-bold text-propolis-green text-center">Propolis Herbal (Pack)</h3>
+              <p className="text-center text-gray-600">Pack familiar para toda la temporada</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <img 
+                src="/lovable-uploads/f621f23f-5a7e-4b43-ad96-b41a3ca58033.png" 
+                alt="Propolis Kids Botella" 
+                className="h-48 object-contain mx-auto mb-4"
+              />
+              <h3 className="text-xl font-bold text-purple-600 text-center">Propolis Kids (Botella)</h3>
+              <p className="text-center text-gray-600">Fórmula especial para niños con sabor agradable</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <img 
+                src="/lovable-uploads/2196cd37-5ece-4380-8db8-8bf875d3346c.png" 
+                alt="Propolis Herbal Caja" 
+                className="h-48 object-contain mx-auto mb-4"
+              />
+              <h3 className="text-xl font-bold text-propolis-green text-center">Propóleo Herbal (Caja)</h3>
+              <p className="text-center text-gray-600">Presentación en caja para mejor conservación</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <img 
+                src="/lovable-uploads/438a6cca-ff56-40aa-9357-754bba17703e.png" 
+                alt="Propóleo Kids Caja" 
+                className="h-48 object-contain mx-auto mb-4"
+              />
+              <h3 className="text-xl font-bold text-purple-600 text-center">Propóleo Kids (Caja)</h3>
+              <p className="text-center text-gray-600">Formato en caja para mayor duración</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <img 
+                src="/lovable-uploads/2aa9a1ab-9ea7-4fb0-a7b8-18183f38731e.png" 
+                alt="Pack Familiar" 
+                className="h-48 object-contain mx-auto mb-4"
+              />
+              <h3 className="text-xl font-bold text-propolis-gold text-center">Pack Familiar</h3>
+              <p className="text-center text-gray-600">Productos para toda la familia a precio especial</p>
             </div>
           </div>
         </div>
@@ -187,7 +265,13 @@ const Index = () => {
       <footer className="py-8 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <h2 className="text-2xl font-bold mb-4">Propolis Biovital</h2>
+            <div className="flex justify-center mb-4">
+              <img 
+                src="/lovable-uploads/36f63f21-f63b-4564-894d-d018f566f678.png" 
+                alt="Biovital - The Honey Power" 
+                className="h-16"
+              />
+            </div>
             <p className="mb-6">La naturaleza en su máxima expresión para tu salud</p>
             <div className="flex justify-center space-x-4 mb-6">
               <a href="#" className="hover:text-propolis-gold transition-colors">

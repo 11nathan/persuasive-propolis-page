@@ -8,6 +8,13 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2 text-center lg:text-left">
+            <div className="flex justify-center lg:justify-start mb-6">
+              <img 
+                src="/lovable-uploads/36f63f21-f63b-4564-894d-d018f566f678.png" 
+                alt="Biovital - The Honey Power" 
+                className="h-24 md:h-32"
+              />
+            </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               La Potencia Natural del <span className="text-propolis-green">Propóleo</span> para Tu Salud
             </h1>
@@ -30,11 +37,11 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="lg:w-1/2 relative">
-            <div className="relative w-full h-[400px] animate-float">
+            <div className="relative w-full h-[400px] animate-float flex justify-center items-center">
               <img
-                src="/lovable-uploads/c76f0e44-13e4-4d57-8c44-3bf03d836714.png"
+                src="/lovable-uploads/842a496f-9e46-4629-8652-75aad227a67b.png"
                 alt="Propóleo Natural"
-                className="object-contain w-full h-full"
+                className="object-contain w-full h-full max-w-xs md:max-w-sm"
               />
             </div>
             <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg">

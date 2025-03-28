@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Shield, Sun, Leaf, Heart } from 'lucide-react';
+import { Shield, Sun, Leaf, Heart, Award, Star } from 'lucide-react';
 
 const BenefitsSection = () => {
   const benefits = [
@@ -23,6 +23,16 @@ const BenefitsSection = () => {
       icon: <Heart className="w-12 h-12 text-red-500" />,
       title: "Para Toda la Familia",
       description: "Ofrecemos formulaciones específicas tanto para adultos como para niños, adaptadas a las necesidades de cada grupo de edad."
+    },
+    {
+      icon: <Award className="w-12 h-12 text-propolis-gold" />,
+      title: "Calidad Certificada",
+      description: "Todos nuestros productos pasan por rigurosos controles de calidad para garantizar su efectividad y seguridad."
+    },
+    {
+      icon: <Star className="w-12 h-12 text-propolis-purple" />,
+      title: "Tradición y Experiencia",
+      description: "Contamos con años de experiencia en la elaboración de productos naturales basados en el propóleo y sus beneficios."
     }
   ];
 
@@ -36,7 +46,7 @@ const BenefitsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
             <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center">
               <div className="mb-4 p-3 rounded-full bg-gray-100">

@@ -8,6 +8,7 @@ interface ProductCardProps {
   title: string;
   description: string;
   imageSrc: string;
+  boxImageSrc?: string;
   productType: 'herbal' | 'kids';
   benefits: string[];
   price: string;
@@ -18,6 +19,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   title,
   description,
   imageSrc,
+  boxImageSrc,
   productType,
   benefits,
   price,
@@ -62,6 +64,19 @@ const ProductCard: React.FC<ProductCardProps> = ({
             ))}
           </ul>
         </div>
+        
+        {boxImageSrc && (
+          <div className="mb-4">
+            <h4 className="font-bold mb-2">También disponible en caja:</h4>
+            <div className="bg-white p-2 rounded-lg">
+              <img 
+                src={boxImageSrc} 
+                alt={`${title} en caja`} 
+                className="h-32 object-contain mx-auto"
+              />
+            </div>
+          </div>
+        )}
         
         <div className="flex items-center justify-between mb-4">
           <div>
