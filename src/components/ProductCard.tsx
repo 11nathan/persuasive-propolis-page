@@ -8,7 +8,7 @@ interface ProductCardProps {
   title: string;
   description: string;
   imageSrc: string;
-  boxImageSrc?: string;
+  boxImageSrc?: string; // We'll keep this in the interface but won't use it
   productType: 'herbal' | 'kids';
   benefits: string[];
   price: string;
@@ -19,7 +19,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   title,
   description,
   imageSrc,
-  boxImageSrc,
+  boxImageSrc, // Keeping the parameter but not using it
   productType,
   benefits,
   price,
@@ -67,19 +67,6 @@ const ProductCard: React.FC<ProductCardProps> = ({
             ))}
           </ul>
         </div>
-        
-        {boxImageSrc && (
-          <div className="mb-6">
-            <h4 className="font-bold mb-2">También disponible en caja:</h4>
-            <div className="bg-white p-3 rounded-lg shadow-sm">
-              <img 
-                src={boxImageSrc} 
-                alt={`${title} en caja`} 
-                className="h-32 object-contain mx-auto"
-              />
-            </div>
-          </div>
-        )}
         
         <div className="flex flex-col gap-4 mb-2">
           <div className="flex items-center justify-between">
