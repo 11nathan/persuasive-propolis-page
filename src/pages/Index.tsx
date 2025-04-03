@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import ProductsSection from "../components/ProductsSection";
 import FeaturedProductsSection from "../components/FeaturedProductsSection";
-import CountdownTimer from "../components/CountdownTimer";
+import TimerSection from "../components/TimerSection";
 import BenefitsSection from "../components/BenefitsSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import GuaranteeSection from "../components/GuaranteeSection";
@@ -24,13 +24,7 @@ const Index = () => {
       <ProductsSection />
       
       {/* Countdown Timer Section */}
-      <section className="py-12 bg-yellow-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <CountdownTimer hours={23} minutes={59} seconds={59} />
-          </div>
-        </div>
-      </section>
+      <TimerSection />
       
       {/* Benefits Section */}
       <BenefitsSection />
